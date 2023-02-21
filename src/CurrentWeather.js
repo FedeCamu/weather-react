@@ -30,17 +30,18 @@ export default function CurrentWeather(props) {
           <div className="col-4 p-2 d-flex justify-content-end">
             <p className="current-temperature">
               {" "}
-              {props.temperature}ºC
+              <span className="temperature">{props.temperature}</span>{" "}
+              <span className="units">ºC</span>
               <strong></strong>
             </p>
           </div>
         </div>
-        <div className="row align-items-center">
+        <div className="row align-items-center justify-content-start">
           <div className="col-4 p-2">
             <ul>
               <li>
                 <span>
-                  <i className="fa-solid fa-wind conditions-fa"></i>{" "}
+                  <i className="fa-solid fa-wind conditions-fa"></i>
                 </span>
                 <span className="conditions">{props.wind}km/h </span>
               </li>
@@ -54,7 +55,8 @@ export default function CurrentWeather(props) {
                 <span className="weather-feels like">
                   <i className="fa-solid fa-temperature-low conditions-fa"></i>
                 </span>
-                <span className="conditions">{props.feel}º <small>RealFeel</small></span>
+                <span className="conditions">{props.feel}º</span>{" "}
+                <span>RealFeel</span>
               </li>
             </ul>
           </div>
