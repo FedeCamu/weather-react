@@ -6,7 +6,16 @@ export default function Footer() {
     <div className="Footer">
       <footer className="credits">
         This project was coded by
-        <span className="credits-ref"> F.Camuncoli</span> <br />
+        <a
+          className="credits-ref"
+          href="https://federica-c-portfolio.netlify.app/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          {" "}
+          F. Camuncoli
+        </a>{" "}
+        <br />
         Open-sourced on
         <a
           className="credits-ref"
