@@ -1,28 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
-import Weather from "./Weather"
+import "./App.css";
 
-function App() {
+import Search from "./Search";
+
+import CurrentWeather from "./CurrentWeather";
+
+import Footer from "./Footer";
+
+export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>
-          Hello World!!
-        </h1>
-<Weather city= "Paris"/>
+      <Search />
 
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <CurrentWeather
+        city="New York"
+        day="Tuesday"
+        time="13:00"
+        date="2023-02-07"
+        temperature={4}
+        wind={5}
+        humidity={57}
+        feel={0}
+        description="clear"
+        icon="https://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png"
+      />
+
+      {/* <!-- // **********************************
+      // **********************************
+      // FORECAST
+      // **********************************
+      // ********************************** --> */}
+      {/* <div>
+        <div class="card bg-transparent card-2 shadow border-0">
+          <div class="weather-forecast text-center" id="forecast">
+            
+        </div>
+      </div> */}
+
+      <Footer />
     </div>
   );
 }
-
-export default App;
