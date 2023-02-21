@@ -31,7 +31,7 @@
   font-size: 28px;
   font-weight: normal;
   position: relative;
-  lineheight: 1;
+  line-height: 1;
   top: -30px;
 }
 
@@ -55,21 +55,18 @@
 }
 
 .CurrentWeather li {
-text-align: left;
-
+  text-align: left;
 }
 
 .CurrentWeather .conditions {
   line-height: 2;
   font-size: 24px;
-  
 }
 
 .CurrentWeather .conditions-fa {
   line-height: 1.5;
   font-size: 22px;
   margin-right: 15px;
-  
 }
 
 .CurrentWeather .feels-like {
