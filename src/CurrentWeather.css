@@ -10,12 +10,6 @@
   text-transform: uppercase;
 }
 
-.CurrentWeather .current-day {
-  text-align: left;
-  margin-left: 0px;
-  font-size: 18px;
-}
-
 .CurrentWeather .current-temperature {
   margin-top: 20px;
   margin-bottom: 20px;

@@ -1,10 +1,11 @@
+import React from "react";
+
+import Search from "./Search";
+import Footer from "./Footer";
+
 import "./App.css";
 
-// import Search from "./Search";
 
-import CurrentWeather from "./CurrentWeather";
-
-import Footer from "./Footer";
 
 export default function App() {
   return (
@@ -12,7 +13,7 @@ export default function App() {
       <div className="container">
         {/* <Search /> */}
 
-        <CurrentWeather defaultCity="London" day="Tuesday" time="13:00" date="2023-02-07" />
+        <Search defaultCity="New York" />
 
         {/* <!-- // **********************************
       // **********************************
