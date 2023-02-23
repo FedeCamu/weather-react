@@ -28,24 +28,11 @@ export default function CurrentWeather(props) {
 
             <WeatherIcon code={props.data.icon} />
 
-              {/* <img
-                src={props.data.icon}
-                alt="clear"
-                width="160"
-                className="d-flex"
-              /> */}
-            </div>
+             </div>
             <div className="col-4 p-2 d-flex justify-content-end">
 
               <WeatherTemp celsius={props.data.temperature} />
-              {/* <p className="current-temperature">
-                {" "}
-                <span className="temperature">
-                  {Math.round(props.data.temperature)}
-                </span>{" "}
-                <span className="units">ºC</span>
-                <strong></strong>
-              </p> */}
+           
             </div>
           </div>
           <div className="row align-items-center justify-content-start">

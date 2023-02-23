@@ -45,7 +45,7 @@ export default function Search(props) {
       longitude: position.coords.longitude,
     });
 
-    console.log(location.latitude, location.longitude);
+    // console.log(location.latitude, location.longitude);
 
     let units = "metric";
 
