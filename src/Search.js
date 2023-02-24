@@ -11,6 +11,7 @@ export default function Search(props) {
   function showWeather(response) {
     setWeather({
       ready: true,
+      coordinates:response.data.coord,
       city: response.data.name,
       date: new Date(response.data.dt * 1000),
       temperature: response.data.main.temp,
@@ -97,7 +98,7 @@ export default function Search(props) {
           </button>
         </div>
         <CurrentWeather data={weather} />
-        <WeatherForecast />
+        <WeatherForecast coordinates={weather.coordinates} />
       </div>
     );
   } else {
