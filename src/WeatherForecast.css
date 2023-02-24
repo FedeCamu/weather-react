@@ -1,0 +1,21 @@
+.card-2 {
+  margin: 15px auto;
+  width: 100%;
+  padding: 0px 10px;
+}
+
+.WeatherForecast .day {
+  font-size: 18px;
+}
+
+.WeatherForecast .temperature {
+  font-size: 18px;
+}
+
+.WeatherForecast .temperature .max-temp {
+  font-weight: bold;
+}
+
+.WeatherForecast .temperature .min-temp {
+  opacity: 0.6;
+}
