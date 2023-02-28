@@ -20,7 +20,7 @@
 
 
  .WeatherTemp .current-temperature .units a {
-   color:white;
+   color:rgb(84, 110, 124);
     text-decoration: none;
     opacity: 0.6;
   

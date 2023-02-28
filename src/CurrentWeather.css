@@ -1,5 +1,5 @@
 .CurrentWeather {
-  color: white;
+  color: rgb(84, 110, 124);
 }
 
 .CurrentWeather .city {
@@ -46,7 +46,7 @@
 
 .CurrentWeather .feels-like {
   font-size: 16px;
-  color: white;
+  color: rgb(84, 110, 124);
 }
 
 
@@ -80,7 +80,7 @@
 
 .CurrentWeather .feels-like {
   font-size: 10px;
-  color: white;
+  
 }
 
 
