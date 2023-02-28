@@ -25,3 +25,25 @@
     opacity: 0.6;
   
  }
+
+
+
+ @media (max-width: 576px){
+
+  .WeatherTemp .current-temperature .temperature {
+  font-size: 48px;
+  }
+
+.WeatherTemp .current-temperature .units {
+  font-size: 14px;
+  font-weight: normal;
+  position: relative;
+  line-height: 1;
+  top: -20px;
+
+ }
+
+
+
+
+ }

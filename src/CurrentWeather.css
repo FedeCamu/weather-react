@@ -48,3 +48,40 @@
   font-size: 16px;
   color: white;
 }
+
+
+@media (max-width:576px) {
+
+  .CurrentWeather .city {
+  
+  font-size: 24px;}
+
+  .CurrentWeather .current {
+  
+  font-size: 18px;
+ 
+}
+
+.CurrentWeather .current-weather-desc {
+  font-size: 24px;
+
+}
+
+.CurrentWeather .conditions {
+  line-height: 1;
+  font-size: 18px;
+}
+
+.CurrentWeather .conditions-fa {
+  line-height: 2;
+  font-size: 18px;
+  
+}
+
+.CurrentWeather .feels-like {
+  font-size: 10px;
+  color: white;
+}
+
+
+}
