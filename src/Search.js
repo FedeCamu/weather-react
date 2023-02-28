@@ -98,6 +98,7 @@ export default function Search(props) {
         </div>
         <CurrentWeather data={weather} />
         <WeatherForecast coordinates={weather.coordinates} />
+        
       </div>
     );
   } else {
