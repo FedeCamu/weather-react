@@ -7,8 +7,9 @@ export default function WeatherForecast(props) {
   const [loaded, setLoaded] = useState(false);
   const [forecast, setForecast] = useState(null);
 
-useEffect(() => {setLoaded(false);
-}, [props.coordinates]);
+  useEffect(() => {
+    setLoaded(false);
+  }, [props.coordinates]);
 
   function handleForecastResponse(response) {
     setLoaded(true);
@@ -21,16 +22,17 @@ useEffect(() => {setLoaded(false);
       <div className="WeatherForecast">
         <div className="card bg-transparent card-2 shadow border-0">
           <div className="row">
-            {forecast.map(function(dailyForcast, index) {
-            if(index<6) {return(
-
-               <div className="col" key={index}>
-              <WeatherForecastDay data={dailyForcast} />
-            </div>
-            );
-            }
-  })}
-           
+            {forecast.map(function (dailyForcast, index) {
+              if (index < 6) {
+                return (
+                  <div className="col" key={index}>
+                    <WeatherForecastDay data={dailyForcast} />
+                  </div>
+                );
+              } else {
+                return null;
+              }
+            })}
           </div>
         </div>
       </div>

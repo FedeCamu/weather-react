@@ -10,7 +10,7 @@ export default function Footer() {
           className="credits-ref"
           href="https://federica-c-portfolio.netlify.app/"
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
         >
           {" "}
           F. Camuncoli
@@ -21,7 +21,7 @@ export default function Footer() {
           className="credits-ref"
           href="https://github.com/FedeCamu/weather-react"
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
         >
           GitHub
         </a>
@@ -30,7 +30,7 @@ export default function Footer() {
           className="credits-ref"
           href="https://weather-app-react-pro.netlify.app/"
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
         >
           Netlify
         </a>
