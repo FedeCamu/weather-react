@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./Search.css";
 import CurrentWeather from "./CurrentWeather";
-import WeatherForecast from "./WeatherForecast"
+import WeatherForecast from "./WeatherForecast";
 
 export default function Search(props) {
   const [weather, setWeather] = useState({ ready: false });
@@ -11,7 +11,7 @@ export default function Search(props) {
   function showWeather(response) {
     setWeather({
       ready: true,
-      coordinates:response.data.coord,
+      coordinates: response.data.coord,
       city: response.data.name,
       date: new Date(response.data.dt * 1000),
       temperature: response.data.main.temp,
@@ -23,14 +23,14 @@ export default function Search(props) {
     });
   }
 
-    function handleSubmit(event) {
-      event.preventDefault();
-      search();
-    }
+  function handleSubmit(event) {
+    event.preventDefault();
+    search();
+  }
 
-    function handleChangeCity(event) {
-      setCity(event.target.value);
-    }
+  function handleChangeCity(event) {
+    setCity(event.target.value);
+  }
 
   function search() {
     const apiKey = "fc8dd57d1eb9660674b78fd766d5034d";
@@ -38,8 +38,6 @@ export default function Search(props) {
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
     axios.get(apiUrl).then(showWeather);
   }
-
-
 
   function showPosition(position) {
     let latitude = position.coords.latitude;
@@ -77,7 +75,6 @@ export default function Search(props) {
               <input
                 type="search"
                 className="form-control"
-                aria-describedby="emailHelp"
                 placeholder="Search City"
                 autoFocus="on"
                 onChange={handleChangeCity}

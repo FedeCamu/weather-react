@@ -1,0 +1,15 @@
+.WeatherForecastDay .day {
+  font-size: 18px;
+}
+
+.WeatherForecastDay .temperature {
+  font-size: 18px;
+}
+
+.WeatherForecastDay .temperature .max-temp {
+  font-weight: bold;
+}
+
+.WeatherForecastDay .temperature .min-temp {
+  opacity: 0.6;
+}
