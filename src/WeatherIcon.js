@@ -28,14 +28,14 @@ const CodeMapping = {
 };
 
 
- return(
-    <ReactAnimatedWeather
-    icon={CodeMapping[props.code]}
-    color={"white"}
-    size={props.size}
-    animate={true}
-  />
-    );
+ return (
+   <ReactAnimatedWeather
+     icon={CodeMapping[props.code]}
+     color={"rgb(84, 110, 124)"}
+     size={props.size}
+     animate={true}
+   />
+ );
 
 
 }
