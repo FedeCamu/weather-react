@@ -1,3 +1,35 @@
+.Search .container {
+  margin: 35px auto;
+  padding: 10%;
+
+  /* max-width: 660px; */
+
+  display: block;
+  border-radius: 30px;
+  color: white;
+  /* background: rgba(0, 0, 0, 0.15); */
+  font-family: "Roboto Condensed", sans-serif;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+   background-image: url(./imgs/default.jpg);
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: center;
+
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 .Search .search-form {
   display: block;
   margin: 0px auto;

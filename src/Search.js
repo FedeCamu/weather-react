@@ -3,6 +3,7 @@ import axios from "axios";
 import "./Search.css";
 import CurrentWeather from "./CurrentWeather";
 import WeatherForecast from "./WeatherForecast";
+import Footer from "./Footer";
 
 export default function Search(props) {
   const [weather, setWeather] = useState({ ready: false });
@@ -67,39 +68,69 @@ export default function Search(props) {
     }
   }
 
-  if (weather.ready) {
+
+
+  function weatherBackground() {
+    let code = weather.code;
+  
+     if (code >= 200 && code <= 531) {
+    return "rain.jpg";
+  } else if (code >= 600 && code <= 622) {
+    return "snow.jpg";
+  } else if (code >= 701 && code <= 781) {
+    return "fog.jpg";
+  } else if (code === 800) {
+    return "sunny-sky.jpg";
+  } else {
+    return "cloudy.jpg";
+  }
+  
+    };
+
+    if (weather.ready) {
     return (
       <div className="Search">
-        <form onSubmit={handleSubmit}>
-          <div className="row">
-            <div className="col-9 search-form col-auto">
-              <input
-                type="search"
-                className="form-control"
-                placeholder="Search City"
-                autoFocus="on"
-                onChange={handleChangeCity}
-              />
-            </div>
+        <div
+          className="container"
+          style={{
+            backgroundImage: `url(./imgs/${weatherBackground()})`,
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
+          <form onSubmit={handleSubmit}>
+            <div className="row">
+              <div className="col-9 search-form col-auto">
+                <input
+                  type="search"
+                  className="form-control"
+                  placeholder="Search City"
+                  autoFocus="on"
+                  onChange={handleChangeCity}
+                />
+              </div>
 
-            <div className=" col-3 col-auto me-auto p-0">
-              <input
-                type="submit"
-                value="search"
-                className="search-button btn w-100"
-              />
+              <div className=" col-3 col-auto me-auto p-0">
+                <input
+                  type="submit"
+                  value="search"
+                  className="search-button btn w-100"
+                />
+              </div>
             </div>
+          </form>
+
+          <div className="button">
+            <button className="Location-button" onClick={handleLocationClick}>
+              Current Location
+            </button>
           </div>
-        </form>
+          <CurrentWeather data={weather} />
+          <WeatherForecast coordinates={weather.coordinates} />
 
-        <div className="button">
-          <button className="Location-button" onClick={handleLocationClick}>
-            Current Location
-          </button>
+          <Footer />
         </div>
-        <CurrentWeather data={weather} />
-        <WeatherForecast coordinates={weather.coordinates} />
-        
       </div>
     );
   } else {
@@ -107,3 +138,10 @@ export default function Search(props) {
     return "Loading...";
   }
 }
+
+
+
+
+
+
+
