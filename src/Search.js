@@ -9,6 +9,8 @@ export default function Search(props) {
   const [weather, setWeather] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
 
+
+
   function showWeather(response) {
     setWeather({
       ready: true,
