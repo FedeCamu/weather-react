@@ -96,6 +96,7 @@ export default function Search(props) {
           className="container"
           style={{
             backgroundImage: `url(./imgs/${weatherBackground()})`,
+            
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
             backgroundPosition: "center",
